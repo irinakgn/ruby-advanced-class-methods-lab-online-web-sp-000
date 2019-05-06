@@ -36,7 +36,7 @@ class Song
        song.save
        song
      else
-       create_by_name(name)
+      self.create_by_name(name)
      end
    end
 
