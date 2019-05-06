@@ -36,11 +36,11 @@ class Song
      self.all.detect {|i| i.name == name}
    end
 
-   def self.find_or_create_by_name(find_this_song)
-     did_i_find_it = self.all.detect {|x| x.name == find_this_song}
+   def self.find_or_create_by_name(name)
+     did_i_find_it = self.all.detect {|x| x.name == name}
      if did_i_find_it == nil
        song = self.new
-       song.name = find_this_song
+       song.name = name
        song.save
        song
      else
