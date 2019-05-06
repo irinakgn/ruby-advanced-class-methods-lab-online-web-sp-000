@@ -15,7 +15,6 @@ class Song
      song.name = string_name_of_the_song
      song.save
      song
-     
    end
 
    def self.new_by_name(name)
