@@ -4,21 +4,18 @@ class Song
    @@all = []
 
    def self.create
-     # initializes a song and saves it to the @@all class variable
-     # either literally or through the class method
-     s = self.new
-     s.save
-     s
+
+     song = self.new
+     song.save
+     song
    end
 
    def self.create_by_name(string_name_of_the_song)
-     # takes in the string name of a song and returns a
-     # song instance with that name set as its name property
-     s = self.new
-     s.name = string_name_of_the_song
-     s.save
-     s
-     # and the song being saved into the @@all class variable.
+     song = self.new
+     song.name = string_name_of_the_song
+     song.save
+     song
+     
    end
 
    def self.new_by_name(name)
