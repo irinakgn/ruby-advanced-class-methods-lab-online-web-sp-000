@@ -2,6 +2,14 @@ class Song
   attr_accessor :name, :artist_name
   @@all = []
 
+  def initialize(name)
+    @name = name
+    # self in the initialize method is our new instance
+    # self.class is Person
+    # self.class.all == Person.all
+    self.class.all << self
+  end
+
   def self.all
     @@all
   end
