@@ -36,7 +36,7 @@ class Song
        song.save
        song
      else
-       did_i_find_it
+       create_by_name(name)
      end
    end
 
