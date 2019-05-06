@@ -32,10 +32,8 @@ class Song
      # there's nothing in the instructions about saving to the @@all class variable
    end
 
-   def self.find_by_name(string_name_of_the_song)
-     # accepts the string name of a song and returns
-     # the matching instance of the song with that name.
-     self.all.detect {|i| i.name == string_name_of_the_song}
+   def self.find_by_name(name)
+     self.all.detect {|i| i.name == name}
    end
 
    def self.find_or_create_by_name(find_this_song)
